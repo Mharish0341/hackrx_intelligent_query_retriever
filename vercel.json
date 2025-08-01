@@ -1,6 +1,5 @@
 {
-  "builds": [
-    { "src": "Dockerfile", "use": "@vercel/docker" }
-  ]
+  "runtime": "container",
+  "dockerfile": "Dockerfile",
+  "regions": ["iad1"]
 }
-
