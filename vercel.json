@@ -1,8 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "functions": {
-    "api/**/*.py": {}
-  },
   "routes": [
     { "src": "/hackrx/run", "dest": "/api/hackrx/run.py" }
   ]
