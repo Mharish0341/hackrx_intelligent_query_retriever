@@ -1,5 +1,0 @@
-{
-  "runtime": "container",
-  "dockerfile": "Dockerfile",
-  "regions": ["iad1"]
-}
