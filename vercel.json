@@ -1,4 +1,6 @@
 {
-  "builds": [{ "src": "Dockerfile", "use": "@vercel/docker" }],
-  "image": { "port": 8000 }
+  "builds": [
+    { "src": "Dockerfile", "use": "@vercel/docker" }
+  ]
 }
+
