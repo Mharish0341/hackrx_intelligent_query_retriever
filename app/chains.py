@@ -26,7 +26,6 @@ SYSTEM_PROMPT = (
 )
 
 
-
 def build_chain(vector_store):
     model = ChatGoogleGenerativeAI(
         model="gemini-2.0-flash",
