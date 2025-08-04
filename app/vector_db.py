@@ -1,4 +1,4 @@
-import hashlib, pathlib
+import pathlib
 from typing import List
 from langchain_community.vectorstores import FAISS
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
@@ -13,8 +13,8 @@ def _embeddings():
     return GoogleGenerativeAIEmbeddings(model=_EMBED_MODEL)
 
 def _index_path_for(chunks: List[str]) -> pathlib.Path:
-    digest = hashlib.sha1("\n".join(chunks).encode("utf-8")).hexdigest()[:16]
-    return _INDEX_ROOT / digest
+    # Single, fixed FAISS index (no hashing)
+    return _INDEX_ROOT / "default"
 
 def build_or_load(chunks: List[str]) -> FAISS:
     index_path = _index_path_for(chunks)
